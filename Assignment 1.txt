@@ -1,0 +1,293 @@
+1) code:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        //System.out.print("Enter the value of a: ");
+        int a = scanner.nextInt();
+        
+        //System.out.print("Enter the value of b: ");
+        int b = scanner.nextInt();
+        
+        //System.out.print("Enter the value of c: ");
+        int c = scanner.nextInt();
+        
+        //System.out.print("Enter the value of d: ");
+        int d = scanner.nextInt();
+        
+        if (a + b > c + d) {
+            System.out.println("Sum of a and b is greater than the sum of c and d.");
+        } else {
+            System.out.println("Sum of a and b is not greater than the sum of c and d.");
+        }
+        
+        scanner.close();
+    }
+}
+
+Output:
+Sum of a and b is greater than the sum of c and d.
+
+2)  code:
+//Even num
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+
+        if (number % 2 == 0) {
+            System.out.println(number + " is an even number.");
+        } else {
+            System.out.println(number + " is an odd number.");
+        }
+        
+        scanner.close();
+    }
+}
+
+Output:
+4569876 is an even number.
+
+
+3)code:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        char Alphabets = scanner.next().charAt(0);
+        
+        if (Alphabets >= 'A' && Alphabets <= 'Z') {
+            System.out.println(Alphabets);
+            for (char ch = Alphabets; ch <= 'Z'; ch++) {
+                System.out.print(ch + " ");
+            }
+        } 
+
+        scanner.close();
+    }
+}
+Output:
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+
+4)code:
+//Swapping
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user for input
+    
+        int firstNumber = scanner.nextInt();
+
+        int secondNumber = scanner.nextInt();
+
+        // Swapping the numbers using a temporary variable
+        int temp = firstNumber;
+        firstNumber = secondNumber;
+        secondNumber = temp;
+
+        // Printing the swapped values
+        System.out.println("Swapped values:");
+        System.out.println("First Number: " + firstNumber);
+        System.out.println("Second Number: " + secondNumber);
+
+        // Close the scanner
+        scanner.close();
+    }
+}
+input: 
+7
+8
+
+Output:
+Swapped values:
+First Number: 8
+Second Number: 7
+
+
+5) code:
+//prime number
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user for input
+
+        int number = scanner.nextInt();
+
+        // Check if the number is prime
+        boolean isPrime = isPrimeNumber(number);
+
+        // Print the result
+        if (isPrime) {
+            System.out.println(number + " is a prime number.");
+        } else {
+            System.out.println(number + " is not a prime number.");
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+
+    // Function to check if a number is prime
+    public static boolean isPrimeNumber(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+Input:89
+Output:
+89 is a prime number.
+
+
+
+
+6) code:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        scanner.close();
+        
+        long factorial = 1;
+        for (int i = 1; i <= number; i++) {
+            factorial *= i;
+        }
+        
+        System.out.println(factorial);
+    }
+}
+
+Input:5
+Output:120
+
+7)code:
+//length of the string
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        String inputString = scanner.nextLine();
+        scanner.close();
+        
+        int length = inputString.length();
+        System.out.println(length);
+    }
+}
+Input:Guvi Geek
+Output:9
+
+8)code:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+      
+        String message = scanner.nextLine();
+        for (int i = 0; i < 10; i++) {
+            System.out.println(message);
+        }
+        
+        scanner.close();
+    }
+}
+Input:Welcome to Guvi
+Output:
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+
+
+
+9)code:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Ask the user to enter their age
+        System.out.print("Enter your age: ");
+        
+        // Read the age input from the user
+        int age = scanner.nextInt();
+        
+        // Check if the person is a senior citizen or not
+        if (age >= 60) {
+            System.out.println("Congratulations! You are a senior citizen.");
+        } else {
+            System.out.println("You are not a senior citizen yet.");
+        }
+        
+        // Close the scanner
+        scanner.close();
+    }
+}
+input:60
+Output:
+Enter your age: 60
+Congratulations! You are a senior citizen.
+
+10)code:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter an integer: ");
+        
+        int number = scanner.nextInt();
+        
+        // Initialize a variable to count the number of digits
+        int numberOfDigits = 0;
+        
+        // Count the number of digits using a loop
+        while (number != 0) {
+            number = number / 10;
+            numberOfDigits++;
+        }
+        
+
+        System.out.println("Number of digits in the entered integer: " + numberOfDigits);
+        scanner.close();
+    }
+}
+
+Output:
+Enter an integer: 234567
+Number of digits in the entered integer: 6
+
+
+
